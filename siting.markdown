@@ -43,5 +43,33 @@ Pressure may be affected by gusts of wind. The Stevenson screen mouting should b
 a breezy day by comparing readings with a neighbouring calibrated station
 3. Sensor should measure extreme conditions (very dry days, very humid days)
 
+## Site Inspection
 
+Things to do on site.
+
+- Carry a camera.
+- Compliance with siting constraints.
+- Read Davis 7852 Rain gauge manual for mounting it.
+- Fabrication for mast pole.
+- How to install the mast pole?
+- Fabrication for rain gauge holder.
+	- Drainage shouldn't be blocked.
+	- Should be on a level.
+	- Should be kept clear from all obstacles.
+	- Read the manual for installing rain guage.
+- Clamping for Electric enclosure.
+- Cover over electric enclosure.
+- inlet outlet for 
+	- DHT22 wire.
+	- GSM antenna.
+	- Power adapter.
+	- RJ11 jack for rain gauge.
+- Wire should be waterproof.
+- Clamping for stevenson screen.
+- Constrants should be re-checked.
+- Look for Area best suited for Planting stevenson screen.
+- Power supply.
+- Clamping methods.
+- Rain gauge platform.
+- Clamping and box Clamping, look on the pole. 
 
