@@ -55,8 +55,8 @@ layout: default
 
 <tr>
     <td>Availability</td>
-    <td>[GSM300](http://probots.co.in/index.php?main_page=product_info&cPath=77&products_id=425)</td>
-    <td>[GSM 900](http://probots.co.in/index.php?main_page=product_info&cPath=77&products_id=470)</td>
+    <td>[GSM300](http://probots.co.in)</td>
+    <td>[GSM 900](http://probots.co.in/)</td>
 </tr>
 
 
@@ -74,7 +74,7 @@ layout: default
     + SIM900 and the SIM300 modem operate from 3.4V to 4.5V supply range.
     + Same AT commands used for call/sms in SIM300 can be used with the SIM900 modem.
     + SIM900 is a quad band modem where as sim300 supports only 900,1800,1900MHz band.
-    + SIm300 850 Rs costing and Sim 900 cost 1400 Rs from [Probot's GSM section.](http://probots.co.in/index.php?main_page=index&cPath=77)
+    + SIm300 850 Rs costing and Sim 900 cost 1400 Rs from [Probot's GSM section.](http://probots.co.in/)
     
 + What we should use?
     + We are interfacing to web service with GSM.
@@ -84,14 +84,14 @@ layout: default
     + So for better GPRS connection and bandwidth GSM900 is best recommended  module.
 
 + Current issue
-    + If we want to bypass the voltage regulator then we have to buy this [sim90](http://probots.co.in/index.php?main_page=product_info&cPath=77&products_id=444)
+    + If we want to bypass the voltage regulator then we have to buy this [sim90.](http://probots.co.in/)
     + This is the spare sim900 without regulator.this is standalone sim device. We have to interface it with 3.5v with Low drop out regulator which consume less current and lot more options are open before us.( need good hands to fabricate the device on PCB, not on zero board).
 
 ## Constrains for now
 + If breakout module used then
     + We have to give ~9V with 1A atleast to GSM by whatever source.
     + On battery, with AA+ 1.2 v * 8 = 9.6 v. of say 2000mAh.( 8 battery pack with avg 2000mAh )(rechargable), costing 350rs/ 2pcs, this makes cost of 8 pcs battery to 1400Rs.(Detail from whole sale market of battery)).
-    + Modem has low power consumption of 0.25 A during normal operations and around 1 A during transmission.(mentioned in [site](http://probots.co.in/index.php?main_page=product_info&cPath=77&products_id=470) under specification).
+    + Modem has low power consumption of 0.25 A during normal operations and around 1 A during transmission.(mentioned in [site](http://probots.co.in/) under specification).
     + so in case we keep GSM modem in its lowest current consumption then 
         + 2000 mA in 60 min => (2000 ) / 1000 A in 60 min.
         + 2 A in 60 min.
