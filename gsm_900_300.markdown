@@ -3,11 +3,6 @@ title: gsm_900_300
 layout: default
 ---
 
----
-title: gsm_900_300
-layout: default
----
-
 #GSM sim with Battery
 ###Comparision between 900 and 300 and battery as backup.
 <hr>
