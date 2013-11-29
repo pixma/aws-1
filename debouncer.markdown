@@ -26,7 +26,7 @@ layout: default
 <br>
 + Calculations
 <br>
-	`T = 2.67 * C , C in nF.<br>T = time.<br>C = capacitor in nF unit.`
+	`T = 2.67 * C , C in nF.T = time.C = capacitor in nF unit.`
 <br>
 <br>
 + Thus from the above equation, we can calculate capacitor value for achieving desired clocks.
