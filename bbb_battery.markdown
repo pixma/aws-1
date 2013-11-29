@@ -47,102 +47,103 @@ Verified from [here](http://arduino.cc/en/Main/Standalone).
 <hr>
 ####Running AWS on BBB
 ######Circuit
-    + MCU with hardware reset circuit.
+	+ MCU with hardware reset circuit. <br><br>
+<center>
 <img src="images/resetPic.png" width="300" height="300" >
-<br>
-Source : [This Link](http://jeelabs.org/2011/06/26/current-measurements/) and [This Link](http://gadgetmakersblog.com/power-consumption-arduinos-atmega328-microcontroller/)
-<br>
-        + Current consumption (Doing Nothing) at 16MHz at 5 v : 16.43 mA.
-        + Power consumption 16 MHz at 5V is running blinking LED but without connecting LED is 81.8 mW.
-        + Current consumption (Doing Nothing) at 16 Mhz at 3.3v: 6.6 mA.
-        + Operating Voltage max. :  6 V.
-        + Low Operating Voltage at 1 MHz : 1.8 V
-        + Power in mW at 16 MHz is 21.8.
-    + LCD Interfacing
-        + Source for 20x4 [datasheet](http://www.electronicaestudio.com/docs/JHD204ASERIES.pdf)
-        + Operating Voltage typical: 5V.
-        + Current Idd at 5 v is typical: 2 mA.
-    + DHT22 interfacinig and its consumptions, [datasheet](http://www.adafruit.com/datasheets/DHT22.pdf)
-        + Typical Supply voltage: 5V.
-        + Typical Current Supply: 1.5 mA.
-    + BMP085 interfacing and current consumption, [datasheet](http://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf)
-        + Typical Voltage Supply: 2.5 V
-        + Max Voltage Supply: 3.6 V
-        + Typical Current Supply at standard mode: 5uA.
-    + GSM interfacing and current consumption [Starter Guide](http://probots.co.in/Manuals/SIM900%20GSM%20Modem%20-%20Starter%20Guide.pdf)
-        + Voltage: 7–15V AC or DC (board has onboard rectifier).
-        + Normal operation Current draw: 0.25 A.
-        + Transmission time current draw: 1 A.
-    + apart from devices so interfaced, we have loads of smd and through hole LEDs and voltage regulators on GSM breakout board and also on BBB board of ours which will also contribute in drawing current from the power source, .i.e. battery.
-    + So adding up current values of sensors, LCD, GSM and MCU its comes up to 19.93mA + 5uA + 0.25 A and this comes out as ~0.27 A.
-    + Current consumption of LEDs and voltage regulators are also noticable. 
+</center>
+<br><br>
+Source : [This Link](http://jeelabs.org/2011/06/26/current-measurements/) and [This Link.](http://gadgetmakersblog.com/power-consumption-arduinos-atmega328-microcontroller/)
+<br><br>
+	+ Current consumption (Doing Nothing) at 16MHz at 5 v : 16.43 mA.
+	+ Power consumption 16 MHz at 5V is running blinking LED but without connecting LED is 81.8 mW.
+	+ Current consumption (Doing Nothing) at 16 Mhz at 3.3v: 6.6 mA.
+	+ Operating Voltage max. :  6 V.
+	+ Low Operating Voltage at 1 MHz : 1.8 V
+	+ Power in mW at 16 MHz is 21.8.
++ LCD Interfacing
+	+ Source for 20x4 [datasheet](http://www.electronicaestudio.com/docs/JHD204ASERIES.pdf)
+	+ Operating Voltage typical: 5V.
+	+ Current Idd at 5 v is typical: 2 mA.
++ DHT22 interfacinig and its consumptions, [datasheet](http://www.adafruit.com/datasheets/DHT22.pdf)
+	+ Typical Supply voltage: 5V.
+	+ Typical Current Supply: 1.5 mA.
++ BMP085 interfacing and current consumption, [datasheet](http://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf)
+	+ Typical Voltage Supply: 2.5 V
+	+ Max Voltage Supply: 3.6 V
+	+ Typical Current Supply at standard mode: 5uA.
++ GSM interfacing and current consumption [Starter Guide](http://probots.co.in/Manuals/SIM900%20GSM%20Modem%20-%20Starter%20Guide.pdf)
+	+ Voltage: 7–15V AC or DC (board has onboard rectifier).
+	+ Normal operation Current draw: 0.25 A.
+	+ Transmission time current draw: 1 A.
++ apart from devices so interfaced, we have loads of smd and through hole LEDs and voltage regulators on GSM breakout board and also on BBB board of ours which will also contribute in drawing current from the power source, .i.e. battery.
++ So adding up current values of sensors, LCD, GSM and MCU its comes up to 19.93mA + 5uA + 0.25 A and this comes out as ~0.27 A.
++ Current consumption of LEDs and voltage regulators are also noticable. 
 <hr>
 ### Battery 
 + One beast, .i.e GSM here which takes hell lot of current from power source.
 + Lets take one by one battery and analyze which suits best to AWS on BBB with GSM .
-    + AA+ Ni-MH
-        + Taking 2000mAh as avg current capacity and 1.2v per cell.
-        + AA+ 1.2v x 8 ~ 9.6 v of 2000mAh.
-        + This much of voltage is required for powering GSM and this battery have the discharge rate to power up the GSM. 
-        + But one problems come before us is GSM module can take that much of voltage without any problem but our BBB board cannot tolerate that much of voltage so we have to plugin a Low drop out voltage regulator whose current consumption is in ~10 mA [datasheet](https://www.sparkfun.com/datasheets/Components/LD1117V33.pdf)and then we can connect to MCU.
-        + So we cannot bypass even low drop out voltage regulators, but we must use LDO, or say low drop out voltage regulators so less current will be consumed.
-        + considering 0.27 A is consumed and we have 2000mAh then on battery the AWS will live for not more than 8Hrs (max). 
-    + Lithium and Lipo battery
-        + They are very sensitivie and have 3.7 v with 1800 mAh in average.
-        + This battery alone cannot power GSM module. 
-        + Avoid keeping LIP and Lithium battery in series or in parallel.
-    + Alkaline battery
-        + The figures are same as AA+ Ni-MH battery, but difference is these battery are not rechargable in common.
-    + Lead acid battery, reffered from [here](http://www.vetco.net/blog/?p=113)
-        + They are
-            + 12 V with 4.5, 6, 8, 9, 12 A of current capacity.
-            + Current draw from the battery will be the quotient of voltage and load.
-            + This battery got a load of current capacity.
-            + We have to put a LDO voltage regulator in this case to drop down to 5 v adn 3.3 v to power up MCU and BMP085.
-            + 12 v will be powered to GSM module.
-            + Considering 12 v 12 AH.
-            + Normal current cunsumption was ~ 0.27A.
-            + With this, our AWS on Lead acid battery last for 44.4 Hrs.
-    + Point to optimize
-        + Seek for sleep mode where ever required.
-        + Sleep MCU.
-        + Power Down GSM.
-        + Make your own GSM Break out module hence only one voltage regulator will be used.
-        + Use SMD components on BBB which have low power consumption.
-        + Keep sim deregistred as much as possible.
-        + LED are sucker of current, eliminate those LED wherever possible.
+	+ AA+ Ni-MH
+		+ Taking 2000mAh as avg current capacity and 1.2v per cell.
+		+ AA+ 1.2v x 8 ~ 9.6 v of 2000mAh.
+		+ This much of voltage is required for powering GSM and this battery have the discharge rate to power up the GSM.
+	+ But one problems come before us is GSM module can take that much of voltage without any problem but our BBB board cannot tolerate that much of voltage so we have to plugin a Low drop out voltage regulator whose current consumption is in ~10 mA [datasheet](https://www.sparkfun.com/datasheets/Components/LD1117V33.pdf)and then we can connect to MCU.
+	+ So we cannot bypass even low drop out voltage regulators, but we must use LDO, or say low drop out voltage regulators so less current will be consumed.
+	+ considering 0.27 A is consumed and we have 2000mAh then on battery the AWS will live for not more than 8Hrs (max).
++ Lithium and Lipo battery
+	+ They are very sensitivie and have 3.7 v with 1800 mAh in average.
+	+ This battery alone cannot power GSM module.
+	+ Avoid keeping LIPO and Lithium battery in series or in parallel.
++ Alkaline battery
+	+ The figures are same as AA+ Ni-MH battery, but difference is these battery are not rechargable in common.
++ Lead acid battery, reffered from [here](http://www.vetco.net/blog/?p=113)
+	+ They are
+	+ 12 V with 4.5, 6, 8, 9, 12 A of current capacity.
+		+ Current draw from the battery will be the quotient of voltage and load.
+		+ This battery got a load of current capacity.
+		+ We have to put a LDO voltage regulator in this case to drop down to 5 v adn 3.3 v to power up MCU and BMP085.
+		+ 12 v will be powered to GSM module.
+		+ Considering 12 v 12 AH.
+			+ Normal current cunsumption was ~ 0.27A.
+			+ With this, our AWS on Lead acid battery last for 44.4 Hrs.
+	+ Point to optimize
+		+ Seek for sleep mode where ever required.
+		+ Sleep MCU.
+		+ Power Down GSM.
+		+ Make your own GSM Break out module hence only one voltage regulator will be used.
+		+ Use SMD components on BBB which have low power consumption.
+		+ Keep sim deregistred as much as possible.
+		+ LED are sucker of current, eliminate those LED wherever possible.
 <hr>
 ### Fabrication details
 ###### putting AWS on good material
 + Options are
-    + Put this on Zero Board
-        + Pros
-            + Quick in making by hands.
-            + Can re-wire.
-            + Place components as you desire.
-            + Can alter connections in future.
-            + Other components can be added in future.
-            + Customizable.
-        + Cons
-            + Wires may mess up things.
-            + Internal resistance of baord may not let a good quality voltage and current to flow in circuit.
-            + Soldering point many time lose there contacts.
-            + This is for temporary useage.
-            + Not fit for production environment.
-            + Due to flexibility of Zero Boards, joint may easily break off.
-    + Putting this on PCB
-        + Pros
-            + Good conduction on board.
-            + Board will have long life.
-            + Components stands sturdy and with good hold on board.
-            + Good quality soldering can be done on that.
-            + Can tolerate temperature and force.
-        + Cons
-            + Cannot be re-wired.
-            + Onces done connot be changed.
-            + Some components may get wasted but other components can be recovered.
-            + PCB will be wasted of circuit not works as per desire.
++ Put this on Zero Board
++ Pros
+	+ Quick in making by hands.
+	+ Can re-wire.
+        + Place components as you desire.
+        + Can alter connections in future.
+        + Other components can be added in future.
+        + Customizable.
++ Cons
+	+ Wires may mess up things.
+        + Internal resistance of baord may not let a good quality voltage and current to flow in circuit.
+        + Soldering point many time lose there contacts.
+        + This is for temporary useage.
+        + Not fit for production environment.
+        + Due to flexibility of Zero Boards, joint may easily break off.
++ Putting this on PCB
++ Pros
+	+ Good conduction on board.
+        + Board will have long life.
+        + Components stands sturdy and with good hold on board.
+        + Good quality soldering can be done on that.
+        + Can tolerate temperature and force.
++ Cons
+        + Cannot be re-wired.
+        + Onces done connot be changed.
+        + Some components may get wasted but other components can be recovered.
+        + PCB will be wasted of circuit not works as per desire.
 <hr>
-
 Your comments are valuable, mail me at <a href="mailto:pixma38@gmail.com">Annim Banerjee </a>
 <hr>
