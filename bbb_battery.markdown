@@ -34,7 +34,7 @@ Verified from [here](http://arduino.cc/en/Main/Standalone).
 + Other way is shown [here.](http://arduino.cc/en/Tutorial/ArduinoToBreadboard)
 + Another sketch loader is available [here.](http://www.embeddedmarket.com/products/Arduino-Sketch-Loader-Circuit/)
 <br>
-+ Thing here is we have to upload the sketch to our MCU so installed on our BBB. So to upload program we just need RxT and TxT pins along with that RST pin . So wither we can use a sketch loader to load program onto MCU, or we can make a arduino as sketch loader and upload our program on to MCU in our BBB. This is shown [here.](http://arduino.cc/en/Tutorial/ArduinoISP) Another thing is usually we get atmega328 IC from market with pre-burnt bootloader so please do not mess with bootloader, just skip the step of burning bootloader for now.
++ Thing here is we have to upload the sketch to our MCU so installed on our BBB. So to upload program we just need RxT and TxT pins along with that RST pin . So either we can use a sketch loader to load program onto MCU, or we can make a arduino as sketch loader and upload our program on to MCU in our BBB. This is shown [here.](http://arduino.cc/en/Tutorial/ArduinoISP) Another thing is usually we get atmega328 IC from market with pre-burnt bootloader so please do not mess with bootloader, just skip the step of burning bootloader for now.
 <hr>
 #### AWS on bare bone board with battery as support
 ###### Components along with connection powered by battery.
