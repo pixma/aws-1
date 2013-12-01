@@ -1,7 +1,8 @@
 ---
-title: Low Power Boards
-Layout: Default
+title: LowPowerBoards
+Layout: default
 ---
+
 ## Low power Challenge
 <hr>
  + To run our system for long time such as 3-5 years without touching the power sources whatever they are.
