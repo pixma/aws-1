@@ -72,4 +72,49 @@ Things to do on site.
 - Clamping methods.
 - Rain gauge platform.
 - Clamping and box Clamping, look on the pole. 
+<hr>
+## Site images
+- Image 
+<br>
+<center>
+<img src="images/IMG_20131202_102835.jpg" height= "500" width="750" />
+</center>
+<br>
+<hr>
+- More images are here in the <a href="https://github.com/pixma/aws-1/tree/master/images" > gallery. </a>
+<br>
+<hr>
+##Condition of the area
+- Tree, cable lines, syntax platform, high story buildingsas obstacle for breeze.
+- No power source option on terrace.
+- Open and large area with cemented floor.
 
+##Recommended area
+- Place pole on the L corner of the wall rail.
+- Place the pole on opposite side from where the tree are there.
+- In this picture on this page, the L corner is duitable for clamping the pole.
+- As, we cannot pithc our pole on terrace floor, we have to clamp our pole with wall rail.
+- Power line will be coming from inside of house.
+- We have to cover up the wire for protection.
+- Many morepictures are there in galary where you can see the short pipes are clammped.
+
+## Structure
+- Image
+<br>
+<center>
+<img src=" images/IMG_20131202_134532.jpg" height="650" width="450" />
+</center>
+<br>
+- Design
+	- Total height 9 ft.
+	- Each pole 3 ft.
+	- joint with Flanges.
+	- Poles will be of good quality PVC pipes.
+	- Pipes are of white colors, it is.
+	- No stand.
+	- Have to fix with wall rail.
+<br>
+<hr>
+Mail me at <a href="mailto:pixma38@gmail.com" > Annim Banerjee. </a>
+<br>
+<hr>
