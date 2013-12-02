@@ -1,0 +1,98 @@
+<h2 id='low_power_challenge'>Low power Challenge</h2>
+<hr />
+<ul>
+<li>
+<p>To run our system for long time such as 3-5 years without touching the power sources whatever they are.</p>
+
+<h4 id='power_sources_options_before_us_are'>Power sources options before us are-</h4>
+</li>
+
+<li>
+<p>Battery</p>
+
+<ul>
+<li>Alkaline.</li>
+
+<li>AA+ - Ni-MH.</li>
+
+<li>AAA Battery.</li>
+
+<li>Lipo Battery.</li>
+
+<li>Li-ion Battery.</li>
+
+<li>Lead Acid Battery.</li>
+</ul>
+</li>
+
+<li>
+<p>Solar - Solar panel as power source.</p>
+</li>
+
+<li>
+<p>To run any digital system for so long, what factors should support</p>
+
+<ul>
+<li>Battery or say power source self-discharge rate should be as low as possible.</li>
+
+<li>Current consumption by the digital system should be as much low as possible.</li>
+
+<li>Let digital system should use power only when required.</li>
+
+<li>Use low power or ultra-low power components on circuit.</li>
+
+<li>Place lesser components on board so only essential components will draw current. <hr /></li>
+</ul>
+</li>
+
+<li>
+<p>Lets go for some calculations</p>
+
+<ul>
+<li>consider for 3 years.</li>
+
+<li>which is equals to 3 x 365 x 24 = 26289 Hrs.</li>
+
+<li>consider AA+ battery with current capacity of 2500mAH, rechargable battery suppose.</li>
+
+<li>Slef Discharge rate: 2 - 3 percentage, per month. That is, by self discharging rate of 2 percentage, battery discharge by 50 mA per month.</li>
+
+<li>Scenario :-</li>
+
+<li>Net Current consumption by digital system if kept lower than self dischargeing rate then consider these calculations again:</li>
+
+<li>Suppose Net current consumption is 30mA.</li>
+
+<li>This battery will run for 2500mA / 30 mA is equals to 83.3 Hrs.</li>
+
+<li>Recharge the battery as it reaches down by 10 percent.</li>
+
+<li>Then again it runs for 83.3 Hrs.</li>
+
+<li>This makes 26289 / 83.3 Hrs equals to 316 times recharging.</li>
+
+<li>Also, battery also takes time for charging and at same time it also powers up the digital system.</li>
+
+<li>Above calculation is based on ideal conditions. <hr /></li>
+</ul>
+</li>
+</ul>
+
+<h3 id='from_above_calculations'>From above calculations,</h3>
+
+<ul>
+<li>We need to detect battery voltage level.</li>
+
+<li>We need to protect from over charging and also avoid under charging.</li>
+</ul>
+<hr />
+<h2 id='low_ultra_low_power_components'>Low, ultra low power components</h2>
+
+<ul>
+<li>Microcontroller</li>
+
+<li>Sensors</li>
+
+<li>GSM</li>
+</ul>
+<hr />

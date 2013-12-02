@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/atomicule/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>BBB with Battery</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Automatic weather station</h2>
+        <a href="http://pixma.github.io/aws-1" class="button">Home</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+			<h1 id='aws_on_bbb__battery'>Aws on BBB + Battery</h1>
+
+<h5 id='bare_bone_board_with_battery_as_power_source'>Bare Bone Board with battery as power source.</h5>
+<hr />
+<h2 id='bare_bone_board'>Bare Bone Board</h2>
+
+<h4 id='for_arduino_platform_and_inspired_from_arduino_playgroun_and_arduino_tutorial'>for arduino platform and inspired from <a href='http://playground.arduino.cc/Learning/AtmegaStandalone'>arduino playgroun</a> and <a href='http://arduino.cc/en/Tutorial/ArduinoToBreadboard'>arduino tutorial</a>.<br /></h4>
+
+<p>Verified from <a href='http://arduino.cc/en/Main/Standalone'>here</a>. <hr /></p>
+
+<h4 id='components_required_for_making_bare_bone_board'>Components required for making Bare bone Board</h4>
+
+<ul>
+<li>
+<p>MCU : Atmega328 | <a href='http://www.atmel.com/Images/doc8161.pdf'>datasheet.</a></p>
+</li>
+
+<li>
+<p>Crystal : 16 MHz.</p>
+</li>
+
+<li>
+<p>Caps : 22pF x 2.</p>
+</li>
+
+<li>
+<p>VCC pin connected to 7, 20 and 21.</p>
+</li>
+
+<li>
+<p>GND pin connected to 8, 22.</p>
+</li>
+
+<li>
+<p>VCC to power MCU and another VCC to power Analog to Digital login in MCU and other VCC for Analog referrence.</p>
+</li>
+
+<li>
+<p>pin number 9 and 10 goes to Crystal of 16 MHz.</p>
+</li>
+
+<li>
+<p>pin number 1 us pulled up with resistor of ~10k.</p>
+</li>
+
+<li>
+<p>pin number 1 is also connected to a toggle switch whoes other leg is grounded.(Recommended in datasheet of MCU Atmega328/168 under reset circuit section).</p>
+</li>
+
+<li>
+<p>22pF capacitor connected to crystall legs and grounded.</p>
+</li>
+
+<li>
+<p>For images please take a look from this <a href='http://arduino.cc/en/Main/Standalone'>link.</a></p>
+</li>
+
+<li>
+<p>Voltage regulators are required to give good quality 5VDC to MCU.</p>
+</li>
+
+<li>
+<p>with that 100uF capacitor and one ceramic capacitor to filter current. + Issue with doing bare bone board is MCU is now exposed to power supply so we have to take care of the power regulation. + Other things is if we have a ready made source of DC power then we can kick out the voltage regualtor ffrom our board.</p>
+</li>
+
+<li>
+<p>This completes the arduino as a standalone board without any other components.</p>
+</li>
+
+<li>
+<p>And on getting power to MCU, cpu will start executing the loaded code. <hr /></p>
+
+<h4 id='uploading_code_to_bare_bone_board'>Uploading code to bare bone board</h4>
+
+<h6 id='option_are_there_to_do_this'>Option are there to do this</h6>
+</li>
+
+<li>
+<p>One way is shown in this <a href='http://arduino.cc/en/Main/Standalone'>web page</a></p>
+</li>
+
+<li>
+<p>Other way is shown <a href='http://arduino.cc/en/Tutorial/ArduinoToBreadboard'>here.</a></p>
+</li>
+
+<li>
+<p>Another sketch loader is available <a href='http://www.embeddedmarket.com/products/Arduino-Sketch-Loader-Circuit/'>here.</a> <br /></p>
+</li>
+
+<li>
+<p>Thing here is we have to upload the sketch to our MCU so installed on our BBB. So to upload program we just need RxT and TxT pins along with that RST pin . So either we can use a sketch loader to load program onto MCU, or we can make a arduino as sketch loader and upload our program on to MCU in our BBB. This is shown <a href='http://arduino.cc/en/Tutorial/ArduinoISP'>here.</a> Another thing is usually we get atmega328 IC from market with pre-burnt bootloader so please do not mess with bootloader, just skip the step of burning bootloader for now. <hr /></p>
+
+<h4 id='aws_on_bare_bone_board_with_battery_as_support'>AWS on bare bone board with battery as support</h4>
+
+<h6 id='components_along_with_connection_powered_by_battery'>Components along with connection powered by battery.</h6>
+<br /></li>
+
+<li>
+<p>Components which requires power source in aws project apart from mcu. + Sensors + DHT22 + BMP085 + GSM <hr /></p>
+
+<h4 id='running_aws_on_bbb'>Running AWS on BBB</h4>
+
+<h6 id='circuit'>Circuit</h6>
+
+<ul>
+<li>MCU with hardware reset circuit. <br /><br /> <center>
+<img height='300' src='images/resetPic.png' width='300' />
+</center> <br /><br /> Source : <a href='http://jeelabs.org/2011/06/26/current-measurements/'>This Link</a> and <a href='http://gadgetmakersblog.com/power-consumption-arduinos-atmega328-microcontroller/'>This Link.</a> <br /><br /></li>
+
+<li>Current consumption (Doing Nothing) at 16MHz at 5 v : 16.43 mA.</li>
+
+<li>Power consumption 16 MHz at 5V is running blinking LED but without connecting LED is 81.8 mW.</li>
+
+<li>Current consumption (Doing Nothing) at 16 Mhz at 3.3v: 6.6 mA.</li>
+
+<li>Operating Voltage max. : 6 V.</li>
+
+<li>Low Operating Voltage at 1 MHz : 1.8 V</li>
+
+<li>Power in mW at 16 MHz is 21.8.</li>
+</ul>
+</li>
+
+<li>
+<p>LCD Interfacing</p>
+
+<ul>
+<li>Source for 20x4 <a href='http://www.electronicaestudio.com/docs/JHD204ASERIES.pdf'>datasheet</a></li>
+
+<li>Operating Voltage typical: 5V.</li>
+
+<li>Current Idd at 5 v is typical: 2 mA.</li>
+</ul>
+</li>
+
+<li>
+<p>DHT22 interfacinig and its consumptions, <a href='http://www.adafruit.com/datasheets/DHT22.pdf'>datasheet</a></p>
+
+<ul>
+<li>Typical Supply voltage: 5V.</li>
+
+<li>Typical Current Supply: 1.5 mA.</li>
+</ul>
+</li>
+
+<li>
+<p>BMP085 interfacing and current consumption, <a href='http://www.adafruit.com/datasheets/BMP085_DataSheet_Rev.1.0_01July2008.pdf'>datasheet</a></p>
+
+<ul>
+<li>Typical Voltage Supply: 2.5 V</li>
+
+<li>Max Voltage Supply: 3.6 V</li>
+
+<li>Typical Current Supply at standard mode: 5uA.</li>
+</ul>
+</li>
+
+<li>
+<p>GSM interfacing and current consumption <a href='http://probots.co.in/Manuals/SIM900%20GSM%20Modem%20-%20Starter%20Guide.pdf'>Starter Guide</a></p>
+
+<ul>
+<li>Voltage: 7–15V AC or DC (board has onboard rectifier).</li>
+
+<li>Normal operation Current draw: 0.25 A.</li>
+
+<li>Transmission time current draw: 1 A.</li>
+</ul>
+</li>
+
+<li>
+<p>apart from devices so interfaced, we have loads of smd and through hole LEDs and voltage regulators on GSM breakout board and also on BBB board of ours which will also contribute in drawing current from the power source, .i.e. battery.</p>
+</li>
+
+<li>
+<p>So adding up current values of sensors, LCD, GSM and MCU its comes up to 19.93mA + 5uA + 0.25 A and this comes out as ~0.27 A.</p>
+</li>
+
+<li>
+<p>Current consumption of LEDs and voltage regulators are also noticable. <hr /></p>
+
+<h3 id='battery'>Battery</h3>
+</li>
+
+<li>
+<p>One beast, .i.e GSM here which takes hell lot of current from power source.</p>
+</li>
+
+<li>
+<p>Lets take one by one battery and analyze which suits best to AWS on BBB with GSM . + AA+ Ni-MH + Taking 2000mAh as avg current capacity and 1.2v per cell. + AA+ 1.2v x 8 ~ 9.6 v of 2000mAh. + This much of voltage is required for powering GSM and this battery have the discharge rate to power up the GSM.</p>
+
+<ul>
+<li>But one problems come before us is GSM module can take that much of voltage without any problem but our BBB board cannot tolerate that much of voltage so we have to plugin a Low drop out voltage regulator whose current consumption is in ~10 mA <a href='https://www.sparkfun.com/datasheets/Components/LD1117V33.pdf'>datasheet</a>and then we can connect to MCU.</li>
+
+<li>So we cannot bypass even low drop out voltage regulators, but we must use LDO, or say low drop out voltage regulators so less current will be consumed.</li>
+
+<li>considering 0.27 A is consumed and we have 2000mAh then on battery the AWS will live for not more than 8Hrs (max).</li>
+</ul>
+</li>
+
+<li>
+<p>Lithium and Lipo battery</p>
+
+<ul>
+<li>They are very sensitivie and have 3.7 v with 1800 mAh in average.</li>
+
+<li>This battery alone cannot power GSM module.</li>
+
+<li>Avoid keeping LIPO and Lithium battery in series or in parallel.</li>
+</ul>
+</li>
+
+<li>
+<p>Alkaline battery + The figures are same as AA+ Ni-MH battery, but difference is these battery are not rechargable in common.</p>
+</li>
+
+<li>
+<p>Lead acid battery, reffered from <a href='http://www.vetco.net/blog/?p=113'>here</a></p>
+
+<ul>
+<li>
+<p>They are</p>
+</li>
+
+<li>
+<p>12 V with 4.5, 6, 8, 9, 12 A of current capacity.</p>
+
+<ul>
+<li>
+<p>Current draw from the battery will be the quotient of voltage and load.</p>
+</li>
+
+<li>
+<p>This battery got a load of current capacity.</p>
+</li>
+
+<li>
+<p>We have to put a LDO voltage regulator in this case to drop down to 5 v adn 3.3 v to power up MCU and BMP085.</p>
+</li>
+
+<li>
+<p>12 v will be powered to GSM module.</p>
+</li>
+
+<li>
+<p>Considering 12 v 12 AH.</p>
+
+<ul>
+<li>Normal current cunsumption was ~ 0.27A.</li>
+
+<li>With this, our AWS on Lead acid battery last for 44.4 Hrs.</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li>
+<p>Point to optimize</p>
+
+<ul>
+<li>
+<p>Seek for sleep mode where ever required.</p>
+</li>
+
+<li>
+<p>Sleep MCU.</p>
+</li>
+
+<li>
+<p>Power Down GSM.</p>
+</li>
+
+<li>
+<p>Make your own GSM Break out module hence only one voltage regulator will be used.</p>
+</li>
+
+<li>
+<p>Use SMD components on BBB which have low power consumption.</p>
+</li>
+
+<li>
+<p>Keep sim deregistred as much as possible.</p>
+</li>
+
+<li>
+<p>LED are sucker of current, eliminate those LED wherever possible. <hr /></p>
+
+<h3 id='fabrication_details'>Fabrication details</h3>
+
+<h6 id='putting_aws_on_good_material'>putting AWS on good material</h6>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li>
+<p>Options are</p>
+</li>
+
+<li>
+<p>Put this on Zero Board</p>
+</li>
+
+<li>
+<p>Pros</p>
+
+<ul>
+<li>Quick in making by hands.</li>
+
+<li>Can re-wire. + Place components as you desire. + Can alter connections in future. + Other components can be added in future. + Customizable.</li>
+</ul>
+</li>
+
+<li>
+<p>Cons + Wires may mess up things. + Internal resistance of baord may not let a good quality voltage and current to flow in circuit. + Soldering point many time lose there contacts. + This is for temporary useage. + Not fit for production environment. + Due to flexibility of Zero Boards, joint may easily break off.</p>
+</li>
+
+<li>
+<p>Putting this on PCB</p>
+</li>
+
+<li>
+<p>Pros + Good conduction on board. + Board will have long life. + Components stands sturdy and with good hold on board. + Good quality soldering can be done on that. + Can tolerate temperature and force.</p>
+</li>
+
+<li>
+<p>Cons + Cannot be re-wired. + Onces done connot be changed. + Some components may get wasted but other components can be recovered. + PCB will be wasted of circuit not works as per desire. <hr /> Your comments are valuable, mail me at <a href='mailto:pixma38@gmail.com'>Annim Banerjee </a> <hr /></p>
+</li>
+</ul>
+		</section>
+
+      </div>
+    </div>
+
+  </body>
+</html>
+
