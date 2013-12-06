@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/atomicule/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>pageBatterTalks</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Automatic weather station</h2>
+        <a href="http://pixma.github.io/aws-1" class="button">Home</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+			<h1 id='data_logger_with_low_power'>Data Logger with Low power.</h1>
+
+<h2 id='lets_collect_the_information_about_the_components_required_for_making_data_logger'>Lets collect the information about the components required for making data logger.</h2>
+
+<ul>
+<li>Atmega328.</li>
+
+<li>Display.</li>
+
+<li>GSM.</li>
+
+<li>SD card.</li>
+
+<li>Battery.</li>
+</ul>
+
+<h2 id='lets_note_down_the_dc_ratings_of_the_above_components'>Lets note down the DC ratings of the above components.</h2>
+
+<ul>
+<li>
+<p>Atmega328 - Running @ 1MHz 1.8 v draws 0.1uA in Power down mode.</p>
+</li>
+
+<li>
+<p>Display, JHD162A Display LCD 16 x 2</p>
+
+<ul>
+<li>Volatge @ 3V consumes 0.2 uA.</li>
+
+<li>Why not any other LCD.</li>
+
+<li>WE have before us digit LCD.</li>
+
+<li>3- 1/2 Digit LCD. But these LCD are static.</li>
+
+<li>Needs more IO pins.</li>
+
+<li>Case with JHD162 and JHD204 have inbuild controller and power consumption is in mA units. Eliminate backlight.</li>
+</ul>
+</li>
+
+<li>
+<p>GSM at sleep mode state - at 3.1v 1.5 mA.</p>
+</li>
+
+<li>
+<p>SD card at 3.3 v - Current consumes 10 uA per pin .i.e. 3 pin equals 30 uA.</p>
+</li>
+
+<li>
+<p>Battery</p>
+
+<ul>
+<li>AA+ 1.5 v , with 3 battery in series gives 4.5 v @ 2700mAH.</li>
+
+<li>Shelf time is 10 years.</li>
+
+<li>Internal resistance 150 milliohms</li>
+</ul>
+</li>
+</ul>
+
+<h2 id='lets_do_calculations'>Lets do calculations</h2>
+
+<ul>
+<li>
+<p>Lets add values</p>
+
+<ul>
+<li>Atmega 0.1 uA.</li>
+
+<li>Display 0.2uA.</li>
+
+<li>GSM 1.5 mA.</li>
+
+<li>SD card 30 uA.</li>
+
+<li>Total = 1.5303 mA.</li>
+
+<li>total ~ 1.55 mA.</li>
+</ul>
+</li>
+
+<li>
+<p>Battery life</p>
+
+<ul>
+<li>2700 mAH.</li>
+
+<li>2700 / 1.55 H = 1741.94 H</li>
+
+<li>
+<li>94 H / 24 = 72.58 Days</li>
+</li>
+
+<li>
+<li>58 / 30 days= 2.42 Months.</li>
+</li>
+</ul>
+</li>
+
+<li>
+<p>With another Battery configurations</p>
+
+<ul>
+<li>2700 mAh * 2 = 5400mAh.( current capacity is been increased. )</li>
+
+<li>
+<li>5 v * 4 ( 2 in series and 2 in parallel ) - 3.0 V</li>
+</li>
+
+<li>.i.e. AA Battery with 5400mAh with 4 pieces.</li>
+
+<li>Total estimated current Consumption ~ 1.55 mA.</li>
+
+<li>5400 / 1.55 H = 3483.87 H.</li>
+
+<li>
+<li>87 / 24 day = 145.16 days.</li>
+</li>
+
+<li>
+<li>
+<p>16 / 30 month = 4.8 months So these are some calculations with battery with considering components are in stand by mode. <br /> <hr /></p>
+
+<h2 id='doing_the_same_calculations_with_taking_6_v_45_a_lead_acid_battery_the_last_option_'>Doing the same calculations with taking 6 v 4.5 A Lead Acid battery( The last option )</h2>
+</li>
+</li>
+</ul>
+</li>
+
+<li>
+<p>no carrying the same figures with Lead acid battery of 6V</p>
+</li>
+
+<li>
+<p>this will be last option to go with. <br /> <br /> <hr /></p>
+</li>
+</ul>
+
+<p>Email me at <a href='mailto:pixma38@gmail.com'> Annim Banerjee </a> <br /> <hr /></p>
+		</section>
+
+      </div>
+    </div>
+
+  </body>
+</html>
+
