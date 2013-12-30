@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/atomicule/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>port Expander</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Automatic weather station</h2>
+        <a href="http://pixma.github.io/aws-1" class="button">Home</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+			<h2 id="port_expansion">Port expansion</h2>
+
+<p>People are expanding thier general purpose IO ports based on some protocols</p>
+
+<ul>
+<li>I2C Bus interface.</li>
+
+<li>SPI interfacing.</li>
+</ul>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h3 id="port_expander_ics_are_used_frequently_used_companies_are">Port expander ICs are used frequently used, companies are</h3>
+
+<ul>
+<li>Philips, PCF8574</li>
+
+<li>Maxim</li>
+
+<li>Microchip</li>
+</ul>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h3 id="from_philiphs_tutotial_from_here">From philiphs, <a href="http://playground.arduino.cc//Main/PCF8574Class">Tutotial from here</a></h3>
+
+<h4 id="intro">Intro</h4>
+
+<p>The I2C bus can be used to extend the number of IO lines. A frequently used chip for this is the PCF8574 which offers 8 IO lines. The PCF8474 has multiple address lines so the I2C address can be changed.</p>
+
+<p>Features</p>
+
+<ul>
+<li>Operating Voltage 2.5v to 6v.</li>
+
+<li>Low stand by current of 10uA maximum.</li>
+
+<li>I2C bus to parallel port expander.</li>
+
+<li>16 addressable individual IO pins.</li>
+
+<li>Package available in DIP24.</li>
+
+<li>This ic remains simple device.</li>
+
+<li>This is bi directional.</li>
+
+<li>Two Port is been provided by this IC.</li>
+
+<li><a href="http://www.protocentral.com/prototyping/137-breakout-board-for-pcf8575-i2c-expander.html">Vendor Availability</a></li>
+
+<li><a href="http://in.element14.com/jsp/search/browse.jsp?N=2103+203654&Ntk=gensearch&Ntt=PCF8574&Ntx=mode+matchallpartial">From element14 india</a></li>
+
+<li><a href="http://www.ti.com/lit/ds/symlink/pcf8575c.pdf">Detailed datasheet from TI</a></li>
+
+<li><a href="http://www.protocentral.com/prototyping/137-breakout-board-for-pcf8575-i2c-expander.html">Examples are available for AVR and mbedded too</a>.</li>
+
+<li>Block Diagram shown below</li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="./images/pcf8575_blockDiag.png" alt="alt text" /></p>
+
+<p><br /></p>
+
+<ul>
+<li>Pin configuration of DIP package</li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="./images/pcf8575_PinConfig.png"" alt="alt text" /></p>
+
+<p><br /></p>
+
+<ul>
+<li>Profit of using this : we will get 2, 8 bit digital, bi directional port, on I2C bus.</li>
+</ul>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h3 id="from_microchip_please_check_here">From microchip <a href="http://tronixstuff.com/2011/08/26/tutorial-maximising-your-arduinos-io-ports/">Please check here</a></h3>
+
+<p><br /></p>
+
+<h4 id="intro_2">INTRO</h4>
+
+<p><br /></p>
+
+<ul>
+<li>The Microchip MCP23017 16-bit serial expander with I2C serial interface. This 28-pin IC offers sixteen inputs or outputs – and up to eight of the ICs can be used on one I2C bus… offering a maximum of 128 extra I/O ports.</li>
+</ul>
+
+<p><br /></p>
+
+<p>Features <br /></p>
+
+<ul>
+<li>Operating Voltage 1.8v to 5.5v</li>
+
+<li>Low stand by current 1uAmax.</li>
+
+<li>Three hardware address pins to allow up to eight devices on the bus.</li>
+
+<li>High SPEED SPI interface. Upto 100 MHz.</li>
+
+<li>HIGH SPEED I2C interface. Upto 1.7 MHz.</li>
+
+<li>16 bit bi directional IO port.</li>
+
+<li>IO ports are input by default.</li>
+
+<li>28 pin DIP package.</li>
+
+<li>Configurable interrupt output pins</li>
+
+<li>Configurable as active-high, active-low or open-drain</li>
+
+<li>INTA and INTB can be configured to operate independently or together.</li>
+
+<li>Block diagram is shown below</li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="./images/mcp23017_blockDiagram.png" alt="alt text" /> <br /> - Pin Configuration of the same <br /> <img src="./images/pinConfig_mcp23017.png" alt="alt text" /> <br /></p>
+
+<ul>
+<li><a href="http://tronixstuff.com/2011/08/26/tutorial-maximising-your-arduinos-io-ports/">Example with arduino</a>.</li>
+
+<li><a href="http://www.sunrom.com/445">sunrom technology, with interfacing schematic</a></li>
+
+<li><a href="http://www.ebay.in/itm/Simple-cheap-I-O-expansion-Microchip-MCP23017-Raspberry-Pi-Arduino-/271296353852">Vendor availability in ebay india</a>.</li>
+
+<li><a href="http://in.element14.com/microchip/mcp23017-e-so/i-o-expander-ic/dp/1262563">in.element14 vendor</a>.</li>
+
+<li>Advantage to use this is , we will have 2 ports from this IC.</li>
+
+<li>I2C and SPI interfacing mode with fast communication speed.</li>
+
+<li>Interrupt logic available.</li>
+
+<li>Parallel IO expansion with I2C or SPI interfacing.</li>
+
+<li>Configurable to operate as 8 bit or 16 bit IO port.</li>
+
+<li>This 28-pin IC offers sixteen inputs or outputs – and up to eight of the ICs can be used on one I2C bus… offering a maximum of 128 extra I/O ports.</li>
+</ul>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h3 id="comparision_table_based_on_some_parameters">Comparision table based on some parameters</h3>
+
+<p><img src="./images/table.png" alt="alt text" /> <br /></p>
+<hr />
+<p><br /></p>
+
+<h3 id="what_more_can_be_done_around_the_way">What more can be done around the way</h3>
+
+<ul>
+<li><a href="http://www.thekanes.org/2010/06/09/expanding-the-arduino-cheap-ways-to-add-output-pins-and-power/">Expanding the arduino, the cheapest way around</a></li>
+
+<li><a href="http://hackaday.com/2011/11/08/a-simple-method-for-expanding-arduino-io-capacity/">Hack a day , simple pin expansion with user comments underneath</a></li>
+
+<li><a href="http://rodelectronics.blogspot.in/2010/03/expand-io-ports-with-another-arduino.html">expand-io-ports-with-another-arduino, with sample code</a></li>
+
+<li><a href="http://playground.arduino.cc/Code/I2CPortExpander8574">arduino nxp port expander examples giving</a></li>
+</ul>
+
+<p><br /></p>
+<hr />
+<p><a href="mailto:pixma38@gmail.com">Annim Banerjee</a></p>
+<hr />
+		</section>
+
+      </div>
+    </div>
+
+  </body>
+</html>
+

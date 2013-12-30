@@ -1,0 +1,27 @@
+# Logfile created on 2013-12-30 12:28:18 +0530 by logger.rb/31641
+I, [2013-12-30T12:28:18.583506 #3156]  INFO -- : 0:  RedCloth (4.2.9) from /var/lib/gems/1.9.1/specifications/RedCloth-4.2.9.gemspec
+I, [2013-12-30T12:28:23.384275 #3156]  INFO -- : 0:  blankslate (2.1.2.4) from /var/lib/gems/1.9.1/specifications/blankslate-2.1.2.4.gemspec
+I, [2013-12-30T12:28:27.928213 #3156]  INFO -- : 0:  fast-stemmer (1.0.2) from /var/lib/gems/1.9.1/specifications/fast-stemmer-1.0.2.gemspec
+I, [2013-12-30T12:28:31.913646 #3156]  INFO -- : 0:  classifier (1.3.3) from /var/lib/gems/1.9.1/specifications/classifier-1.3.3.gemspec
+I, [2013-12-30T12:28:37.440399 #3156]  INFO -- : 0:  colorator (0.1) from /var/lib/gems/1.9.1/specifications/colorator-0.1.gemspec
+I, [2013-12-30T12:28:42.325331 #3156]  INFO -- : 0:  highline (1.6.20) from /var/lib/gems/1.9.1/specifications/highline-1.6.20.gemspec
+I, [2013-12-30T12:28:47.905231 #3156]  INFO -- : 0:  commander (4.1.5) from /var/lib/gems/1.9.1/specifications/commander-4.1.5.gemspec
+I, [2013-12-30T12:29:18.226233 #3156]  INFO -- : 0:  ffi (1.9.3) from /var/lib/gems/1.9.1/specifications/ffi-1.9.3.gemspec
+I, [2013-12-30T12:29:22.503631 #3156]  INFO -- : 0:  liquid (2.5.4) from /var/lib/gems/1.9.1/specifications/liquid-2.5.4.gemspec
+I, [2013-12-30T12:29:26.628701 #3156]  INFO -- : 0:  rb-fsevent (0.9.3) from /var/lib/gems/1.9.1/specifications/rb-fsevent-0.9.3.gemspec
+I, [2013-12-30T12:29:30.220104 #3156]  INFO -- : 0:  rb-inotify (0.9.3) from /var/lib/gems/1.9.1/specifications/rb-inotify-0.9.3.gemspec
+I, [2013-12-30T12:29:34.586023 #3156]  INFO -- : 0:  rb-kqueue (0.2.0) from /var/lib/gems/1.9.1/specifications/rb-kqueue-0.2.0.gemspec
+I, [2013-12-30T12:29:38.100895 #3156]  INFO -- : 0:  listen (1.3.1) from /var/lib/gems/1.9.1/specifications/listen-1.3.1.gemspec
+I, [2013-12-30T12:29:44.031379 #3156]  INFO -- : 0:  maruku (0.7.0) from /var/lib/gems/1.9.1/specifications/maruku-0.7.0.gemspec
+I, [2013-12-30T12:29:49.217406 #3156]  INFO -- : 0:  posix-spawn (0.3.8) from /var/lib/gems/1.9.1/specifications/posix-spawn-0.3.8.gemspec
+I, [2013-12-30T12:29:57.482371 #3156]  INFO -- : 0:  yajl-ruby (1.1.0) from /var/lib/gems/1.9.1/specifications/yajl-ruby-1.1.0.gemspec
+I, [2013-12-30T12:30:09.310463 #3156]  INFO -- : 0:  pygments.rb (0.5.4) from /var/lib/gems/1.9.1/specifications/pygments.rb-0.5.4.gemspec
+I, [2013-12-30T12:30:16.880283 #3156]  INFO -- : 0:  redcarpet (2.3.0) from /var/lib/gems/1.9.1/specifications/redcarpet-2.3.0.gemspec
+I, [2013-12-30T12:30:20.331915 #3156]  INFO -- : 0:  safe_yaml (0.9.7) from /var/lib/gems/1.9.1/specifications/safe_yaml-0.9.7.gemspec
+I, [2013-12-30T12:30:25.186474 #3156]  INFO -- : 0:  parslet (1.5.0) from /var/lib/gems/1.9.1/specifications/parslet-1.5.0.gemspec
+I, [2013-12-30T12:30:28.095652 #3156]  INFO -- : 0:  toml (0.1.0) from /var/lib/gems/1.9.1/specifications/toml-0.1.0.gemspec
+I, [2013-12-30T12:30:33.333175 #3156]  INFO -- : 0:  jekyll (1.4.2) from /var/lib/gems/1.9.1/specifications/jekyll-1.4.2.gemspec
+I, [2013-12-30T12:30:49.130081 #3156]  INFO -- : 0:  kramdown (1.2.0) from /var/lib/gems/1.9.1/specifications/kramdown-1.2.0.gemspec
+I, [2013-12-30T12:30:58.923996 #3156]  INFO -- : 0:  rdiscount (2.1.7) from /var/lib/gems/1.9.1/specifications/rdiscount-2.1.7.gemspec
+I, [2013-12-30T12:31:03.485838 #3156]  INFO -- : 0:  github-pages (12) from /var/lib/gems/1.9.1/specifications/github-pages-12.gemspec
+I, [2013-12-30T12:31:03.488373 #3156]  INFO -- : 0:  bundler (1.5.1) from /var/lib/gems/1.9.1/specifications/bundler-1.5.1.gemspec

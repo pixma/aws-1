@@ -26,10 +26,12 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-			<h1 id='gsm_sim_with_battery'>GSM sim with Battery</h1>
+			<h1 id="gsm_sim_with_battery">GSM sim with Battery</h1>
 
-<h3 id='comparision_between_900_and_300_and_battery_as_backup'>Comparision between 900 and 300 and battery as backup.</h3>
-<hr /><br /><table>
+<h3 id="comparision_between_900_and_300_and_battery_as_backup">Comparision between 900 and 300 and battery as backup.</h3>
+<hr />
+<p><br /></p>
+<table>
 <tr>
     <td>Parameters</td>
     <td>GSM 300</td>
@@ -89,32 +91,84 @@
 </tr>
 
 </table>
-<p><a href='http://raviyp.in/index.php/embedded/143-difference-between-sim300-and-sim900-gsm-modems'>From here</a>, things are coming like this way&#8230;<br /> + Difference between Sim900 and sim 300 + SIM900 and the SIM300 modem operate from 3.4V to 4.5V supply range. + Same AT commands used for call/sms in SIM300 can be used with the SIM900 modem. + SIM900 is a quad band modem where as sim300 supports only 900,1800,1900MHz band. + SIm300 850 Rs costing and Sim 900 cost 1400 Rs from <a href='http://probots.co.in/'>Probot&#8217;s GSM section.</a></p>
+<p><a href="http://raviyp.in/index.php/embedded/143-difference-between-sim300-and-sim900-gsm-modems">From here</a>, things are coming like this way<br /> + Difference between Sim900 and sim 300 + SIM900 and the SIM300 modem operate from 3.4V to 4.5V supply range. + Same AT commands used for call/sms in SIM300 can be used with the SIM900 modem. + SIM900 is a quad band modem where as sim300 supports only 900,1800,1900MHz band. + SIm300 850 Rs costing and Sim 900 cost 1400 Rs from <a href="http://probots.co.in/">Probot’s GSM section.</a></p>
 
 <ul>
 <li>
-<p>What we should use? + We are interfacing to web service with GSM. + Both GSM 900 and GSM 300 in breakout module sucks requires 7-15V with 1 A current while performing operations. + GSM 900 having quad band feature and it is advanced version of GSM 300 . + AT commands are same for both of them. + So for better GPRS connection and bandwidth GSM900 is best recommended module.</p>
+<p>What we should use?</p>
+
+<ul>
+<li>We are interfacing to web service with GSM.</li>
+
+<li>Both GSM 900 and GSM 300 in breakout module sucks requires 7-15V with 1 A current while performing operations.</li>
+
+<li>GSM 900 having quad band feature and it is advanced version of GSM 300 .</li>
+
+<li>AT commands are same for both of them.</li>
+
+<li>So for better GPRS connection and bandwidth GSM900 is best recommended module.</li>
+</ul>
 </li>
 
 <li>
-<p>Current issue + If we want to bypass the voltage regulator then we have to buy this <a href='http://probots.co.in/'>sim90.</a> + This is the spare sim900 without regulator.this is standalone sim device. We have to interface it with 3.5v with Low drop out regulator which consume less current and lot more options are open before us.( need good hands to fabricate the device on PCB, not on zero board).</p>
+<p>Current issue</p>
+
+<ul>
+<li>If we want to bypass the voltage regulator then we have to buy this <a href="http://probots.co.in/">sim90.</a></li>
+
+<li>This is the spare sim900 without regulator.this is standalone sim device. We have to interface it with 3.5v with Low drop out regulator which consume less current and lot more options are open before us.( need good hands to fabricate the device on PCB, not on zero board).</li>
+</ul>
 </li>
 </ul>
 
-<h2 id='constrains_for_now'>Constrains for now</h2>
+<h2 id="constrains_for_now">Constrains for now</h2>
 
 <ul>
-<li>If breakout module used then + We have to give ~9V with 1A atleast to GSM by whatever source. + On battery, with AA+ 1.2 v * 8 = 9.6 v. of say 2000mAh.( 8 battery pack with avg 2000mAh )(rechargable), costing 350rs/ 2pcs, this makes cost of 8 pcs battery to 1400Rs.(Detail from whole sale market of battery)). + Modem has low power consumption of 0.25 A during normal operations and around 1 A during transmission.(mentioned in <a href='http://probots.co.in/'>site</a> under specification). + so in case we keep GSM modem in its lowest current consumption then + 2000 mA in 60 min =&gt; (2000 ) / 1000 A in 60 min. + 2 A in 60 min. + 0.25 A in 480 min ~ 8 hrs. + Now its not certain that when GSm will suck 1A, but its knows that it will eat 1A at transmission point. + In this case, if GSM runs on battery as backup then without putting GSM in transmission, then battery can power GSM for max ~8 hrs.</li>
+<li>If breakout module used then
+<ul>
+<li>We have to give ~9V with 1A atleast to GSM by whatever source.</li>
+
+<li>On battery, with AA+ 1.2 v * 8 = 9.6 v. of say 2000mAh.( 8 battery pack with avg 2000mAh )(rechargable), costing 350rs/ 2pcs, this makes cost of 8 pcs battery to 1400Rs.(Detail from whole sale market of battery)).</li>
+
+<li>Modem has low power consumption of 0.25 A during normal operations and around 1 A during transmission.(mentioned in <a href="http://probots.co.in/">site</a> under specification).</li>
+
+<li>so in case we keep GSM modem in its lowest current consumption then
+<ul>
+<li>2000 mA in 60 min =&gt; (2000 ) / 1000 A in 60 min.</li>
+
+<li>2 A in 60 min.</li>
+
+<li>0.25 A in 480 min ~ 8 hrs.</li>
+
+<li>Now its not certain that when GSm will suck 1A, but its knows that it will eat 1A at transmission point.</li>
+
+<li>In this case, if GSM runs on battery as backup then without putting GSM in transmission, then battery can power GSM for max ~8 hrs.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
-<h2 id='battery_recommended'>Battery Recommended</h2>
+<h2 id="battery_recommended">Battery Recommended</h2>
 
 <ul>
 <li>For GSM battery backup with 8hrs as backup time, is not bad. The battery of AA+ of 1.2v with avg 2000mAh of 8 as pack will powerup the GSm by 9.6 V to GSM breakout module and last for 8 Hrs.</li>
 
-<li>How this AA+ can power up GSM. + 9.6 v is sufficient to power up the board, as per datasheet too. + Current req. to GSM is 0.25 A&lt; GSM &lt; 1 A and battery got 2000 m A per hour capacity. + <a href='http://www.powerstream.com/AA-tests.htm'>From here, power stream</a> shows the comparision, and also shows that AA battery can discharge itself at 2 A discharge rate. Curves shown there. + This confirms that AA+ battery have that burst rate to release upto 2A to GSM, hence droping the capacity.</li>
+<li>How this AA+ can power up GSM.
+<ul>
+<li>9.6 v is sufficient to power up the board, as per datasheet too.</li>
+
+<li>Current req. to GSM is 0.25 A&lt; GSM &lt; 1 A and battery got 2000 m A per hour capacity.</li>
+
+<li><a href="http://www.powerstream.com/AA-tests.htm">From here, power stream</a> shows the comparision, and also shows that AA battery can discharge itself at 2 A discharge rate. Curves shown there.</li>
+
+<li>This confirms that AA+ battery have that burst rate to release upto 2A to GSM, hence droping the capacity.</li>
 </ul>
-<i>Your comments are welcome here. Mail me at <a href='mailto:pixma38@gmail.com'> Annim Banerjee.  </a></i><hr />
+</li>
+</ul>
+
+<p><i>Your comments are welcome here. Mail me at <a href='mailto:pixma38@gmail.com'> Annim Banerjee.  </a></i></p>
+<hr />
 		</section>
 
       </div>
