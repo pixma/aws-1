@@ -52,6 +52,7 @@ layout: default
 + Each message contains an ID that identifies the source, or the contentof a message.
 + Receiver will decide to process or ignore the message, each message.
 + [Check this CAN BUS introduction video.](http://www.youtube.com/watch?v=fTWp6bFIt0s)
++ [CAN Cable characteristics, BUS length 50Kbits per sec for within 1000m range, Screened twisted-pair cables (2x2) with a characteristic impedance of between 108 and 132 Ohm is recommended for the CAN wiring.](http://infosys.beckhoff.com/english.php?content=../content/1033/bx5200/html/co_inswirbus.htm&id=)
 + Available CAN Bus in India
 	+ [Protocentral](http://www.protocentral.com/arduino-shields/337-can-bus-shield.html) , for 1,799 INR.
 	+ [Sumeet e shop](http://shop.sumeetinstruments.com/index.php?route=product/product&path=69_71&product_id=436), for 3,650 INR.
@@ -69,7 +70,7 @@ layout: default
 	+ [In DIP package, 101 INR](http://in.element14.com/microchip/mcp2551-e-p/ic-can-transceiver-dip8-2551/dp/1439745)
 	+ [In SOC smd package, 107 INR](http://in.element14.com/microchip/mcp2551-e-sn/ic-transceiver-can-smd-8soic/dp/1467746)
 + [OpenSource schematics are here](http://www.seeedstudio.com/wiki/images/7/78/CAN-BUS_Shield_v0.9b.pdf)
-
++ Study is still on...
 <hr>
 
 ### Mod Bus
