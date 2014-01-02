@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/atomicule/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/default/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Communication Information</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Automatic weather station</h2>
+        <a href="http://pixma.github.io/aws-1" class="button">Home</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+			<h1 id="communication_between_from_and_how_long">Communication between, from, and how long</h1>
+<hr />
+<p><br /></p>
+
+<h2 id="communication_types">Communication types</h2>
+
+<ul>
+<li>RS232</li>
+
+<li>RS422</li>
+
+<li>RS485</li>
+
+<li>CAN BUS</li>
+
+<li>MOD Bus</li>
+</ul>
+
+<p><br /></p>
+<hr />
+<h2 id="intro">Intro</h2>
+
+<p>This page tells you available types of communication protocol, which takes place between microcontrollers or say between a master and slaves.</p>
+<hr />
+<h3 id="rs232">RS232</h3>
+<hr />
+<h3 id="rs422">RS422</h3>
+<hr />
+<h3 id="rs485">RS485</h3>
+<hr />
+<h3 id="can_bus">CAN Bus</h3>
+
+<ul>
+<li>Controller Area Network (CAN)</li>
+
+<li>Originally developed by Robert Bosh.</li>
+
+<li>Multi drop, multi master serial bus provides communication between controllers, sensors and actuators.</li>
+
+<li>Multi drop, .i.e is, many device on a BUS.</li>
+
+<li>CAN 2.0 A is Standard format.</li>
+
+<li>CAN 2.0 B is extended format.</li>
+
+<li>InternationalStandard ISO 11898
+<ul>
+<li>ISO 11898 2 High Speed applications up to 1Mbps.</li>
+
+<li>ISO 11898 3 Low Speed applications up to 125 Kbps</li>
+</ul>
+</li>
+
+<li>CAN broadcast the messages, any node is allowed to broadcast a message.</li>
+
+<li>Each message contains an ID that identifies the source, or the contentof a message.</li>
+
+<li>Receiver will decide to process or ignore the message, each message.</li>
+
+<li><a href="http://www.youtube.com/watch?v=fTWp6bFIt0s">Check this CAN BUS introduction video.</a></li>
+
+<li>Available CAN Bus in India
+<ul>
+<li><a href="http://www.protocentral.com/arduino-shields/337-can-bus-shield.html">Protocentral</a> , for 1,799 INR.</li>
+
+<li><a href="http://shop.sumeetinstruments.com/index.php?route=product/product&path=69_71&product_id=436">Sumeet e shop</a>, for 3,650 INR.</li>
+
+<li><a href="http://entesla.com/mcp2515-SPI-CAN?filter_name=CAN">entesla</a>, for 1,100 INR.</li>
+</ul>
+</li>
+
+<li><a href="http://www.seeedstudio.com/wiki/CAN-BUS_Shield">Tested with arduino, and interfacing</a></li>
+
+<li>But the above code library is according to the shield.</li>
+</ul>
+
+<h3 id="a_diy_of_can_as_a_customised_board">A DIY of CAN as a customised board</h3>
+
+<h4 id="components_required">Components required</h4>
+
+<ul>
+<li>MCP2515 CAN Bus controller with SPI interface.
+<ul>
+<li><a href="http://in.element14.com/microchip/mcp2515-e-so/can-controller-spi-10ma-18soic/dp/1605565">Available at in.element14.com, in smd SOC package, 200 INR</a></li>
+
+<li><a href="http://in.element14.com/microchip/mcp2515-i-p/controller-can-spi-pdip18-2515/dp/1439391">Available at in.element14.com in Throgh hole, PDIP package, 155 INR</a></li>
+</ul>
+</li>
+
+<li>MCP2551 CAN transceiver to give your board CAN-BUS capibility.
+<ul>
+<li><a href="http://in.element14.com/microchip/mcp2551-e-p/ic-can-transceiver-dip8-2551/dp/1439745">In DIP package, 101 INR</a></li>
+
+<li><a href="http://in.element14.com/microchip/mcp2551-e-sn/ic-transceiver-can-smd-8soic/dp/1467746">In SOC smd package, 107 INR</a></li>
+</ul>
+</li>
+
+<li><a href="http://www.seeedstudio.com/wiki/images/7/78/CAN-BUS_Shield_v0.9b.pdf">OpenSource schematics are here</a></li>
+</ul>
+<hr />
+<h3 id="mod_bus">Mod Bus</h3>
+
+<p><br /></p>
+<hr />
+<p>Mail to: <a href="mailto:pixma38@gmail.com">Annim Banerjee</a>, <a href="mailto:annimbanerjee@nokiamail.com">Alternate mail</a>.</p>
+<hr />
+		</section>
+
+      </div>
+    </div>
+
+  </body>
+</html>
+
