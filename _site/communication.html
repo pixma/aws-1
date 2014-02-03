@@ -41,7 +41,7 @@
 
 <li>CAN BUS</li>
 
-<li>MOD Bus</li>
+<li>MOD Bus ( Serial Communication Protocol ).</li>
 </ul>
 
 <p><br /></p>
@@ -55,6 +55,46 @@
 <h3 id="rs422">RS422</h3>
 <hr />
 <h3 id="rs485">RS485</h3>
+
+<p>ANSI TIA EIA - 485 is a standard defining the electrical characteristics of drivers and receivers for use in balanced digital multipoint systems. RS means “Recommended Standard”.</p>
+
+<p>Components required -</p>
+
+<ul>
+<li>Max 485 E</li>
+
+<li><a href="http://datasheets.maxim-ic.com/en/ds/MAX1487E-MAX491E.pdf">Datasheet here</a></li>
+
+<li><a href="http://in.element14.com/jsp/search/browse.jsp;jsessionid=DDVDTFPQQG0UUCWNBBSRFYY?N=0&Ntk=gensearch&Ntt=MAX485E&Ntx=mode+matchallpartial&exposeLevel2Refinement=true&suggestions=false&ref=globalsearch&_requestid=10151">Available , from element 14</a></li>
+
+<li>DIP 8 package - 316 / pcs</li>
+
+<li>SOIC 8 package- 250 / pcs</li>
+
+<li>The same also availabel in mouser and digikey by part number - MAX 485E.</li>
+
+<li>For detailed study and comparisions, <a href="http://www.lammertbies.nl/comm/info/RS-485.html">please take a look here</a></li>
+
+<li>Its schematics are provided in the datasheet itself.</li>
+
+<li>With arduino, wire connection are show below.</li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="http://dereenigne.org/wp-content/uploads/modbus-417x600.png" alt="Alt text" /></p>
+
+<ul>
+<li>Arduino serial <a href="http://arduino-info.wikispaces.com/SoftwareSerialRS485Example">example goes here</a></li>
+
+<li>Another library with <a href="https://github.com/Protoneer/RS485-Arduino-Library">arduino with max485</a></li>
+
+<li>About cables, this part is coming soon.</li>
+</ul>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
 <hr />
 <h3 id="can_bus">CAN Bus</h3>
 
@@ -129,10 +169,96 @@
 
 <li>Study is still on</li>
 </ul>
-<hr />
-<h3 id="mod_bus">Mod Bus</h3>
 
 <p><br /></p>
+<hr />
+<p><br /></p>
+
+<h3 id="mod_bus">Mod Bus</h3>
+
+<ul>
+<li>
+<p>Modbus is a serial communications protocol originally published by Modicon, now Schneider Electric, in 1979, for use with its programmable logic controllers. So this isn’t any hardware, this is protocol which you can drive on RS232, RS485, even on CAN BUS, by writting the protocol on software part. This was developed for some important reasons in industry environment:</p>
+</li>
+
+<li>
+<p>Developed with industrial application in mind</p>
+</li>
+
+<li>
+<p>opnely published and rolyality free.</p>
+</li>
+
+<li>
+<p>easy to deply and maintain.</p>
+</li>
+
+<li>
+<p>moves raw bits or words without placing many restrictions on vendors.</p>
+</li>
+
+<li>
+<p>Modbus enables communications between many devices, approx 240, connected on same network, for examplee a system that measures temperature and humidity and communicates the results to a computer, Modbus is often used to connect a supervisory computer with a remote terminal unit ( RTU ) in supervisory control and data acqusition systems ( SCADA ).</p>
+</li>
+
+<li>
+<p>But there are some limitations, you can study about it, <a href="http://en.wikipedia.org/wiki/Modbus">here</a></p>
+</li>
+
+<li>
+<p>There are modes under Modbus communication.</p>
+</li>
+
+<li>
+<p>Please check here for your <a href="http://www.simplymodbus.ca/FAQ.htm">FAQs regarding Modbus</a></p>
+</li>
+
+<li>
+<p>ModBus is a serial communication protocol.</p>
+</li>
+
+<li>
+<p>The device requesting the information is called the Modbus Master and the device supplying information are Modbus Slaves.</p>
+</li>
+
+<li>
+<p>In standard network, there is one Master and upto 247 Slaves, each with a unique Slave address from 1 to 247. The Master can also write information to slaves.</p>
+</li>
+
+<li>
+<p>official Modbus specification can be found at <a href="http://www.modbus-ida.org">www.modbus-ida.org</a></p>
+</li>
+
+<li>
+<p>Modbus is an open protocol, meaning that it’s free for manufacturers to build into their equipment without having to pay royalties. It has become a standard communications protocol in industry, and is now the most commonly available means of connecting industrial electronic devices. It is used widely by many manufacturers throughout many industries. Modbus is typically used to transmit signals from instrumentation and control devices back to a main controller or data gathering system, for example a system that measures temperature and humidity and communicates the results to a computer. Modbus is often used to connect a supervisory computer with a remote terminal unit (RTU) in supervisory control and data acquisition (SCADA) systems. Versions of the Modbus protocol exist for serial lines (Modbus RTU and Modbus ASCII) and for Ethernet (Modbus TCP).</p>
+</li>
+
+<li>
+<p>Serial lines, or say modbus communication modes, RTU and ASCII mode of communication.</p>
+</li>
+
+<li>
+<p>this can be implemented also on ethernet, Modbus on TCP.</p>
+</li>
+
+<li>
+<p><a href="http://playground.arduino.cc/Code/ModbusMaster">Arduino with modbus communication</a>, network connected from RS232, RS485 to try this library.</p>
+</li>
+
+<li>
+<p>implementation of modbus on RS232, RS485, <a href="http://www.rtaautomation.com/modbusrtu/">please take a look here</a>.</p>
+</li>
+
+<li>
+<p>Wires for modbus, people are using wires like telephone wires, like RJ11, RJ45 with less wires conncted for ethernet connection, and for RS232 connection/ network, RS232 cables are been used.</p>
+</li>
+
+<li>
+<p>more is coming on this subject, regarding connectors and pin connections.</p>
+</li>
+</ul>
+
+<p>One thing you can take from this content is, Modbus is protocol that you can implement on various physical layers. Plysical layers like RS232, RS422, RS485 and so on. <br /></p>
 <hr />
 <p>Mail to: <a href="mailto:pixma38@gmail.com">Annim Banerjee</a>, <a href="mailto:annimbanerjee@nokiamail.com">Alternate mail</a>.</p>
 <hr />
