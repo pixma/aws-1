@@ -1,0 +1,39 @@
+-DL box dimension
+
+l x b x h = 120 x 120 x 35 mm 
+
+PCB = 90 x 90 mm
+Arduino 80 x 60 mm
+telite gsm modem = 80 x 50 x 30 mm
+Battery = l x b x h = 110 x 30 x 30 mm
+ 
+DL length = 90 + 30 = 120 ~ 130 mm
+DL width =  110( max ) ~ 130 mm
+DL height,  30 mm of battery, Arduino height = 16.5 mm + 2 mm + 20 mm = 38.5 mm, but 10mm will be out from box and other 10 mm is inside box , and this 10, 10 mm is of LCD. Hence, 28.5 mm stays inside box and rest 10 mm will go out. 
+DL height = 30 mm ~ 35 mm.
+
+
+AWS 
+Electronic Device dimensions - 
+l x b x h = 200 x 200 x 60 mm
+
+Length -
+90 mm yuktix pcb + 90 mm solar charger = 180 mm
+
+Breadth side
+- 90 mm of yuktix pcb + 50 mm of telite gsm modem = 140 mm
+- in 60 mm rest, we can place any other ckt if required, like debouncer with RJ11 jack.
+
+height
+- Take 60 mm, as 30 mm is strict dimension/ required at least.
+
+
+- Solar charger - 95 x 30 x 110 mm ~ 100 x 35 x 120 mm
+
+- solar battery 12v 20 AH = l x b x h = 260 x 173 x 235 mm ~ 300 x 180 x 250 mm
+- solar panel dimension = l x b x h = 665 x 530 x 30 mm ~ 680 x 550 x 50 mm
+Davis Rain gauge = 
+- Base / bottom diameter = 170mm
+- Drain hole diameter = 30 mm
+- Distance between drain hole diameter = 115 mm
+- Top tapered, diameter = 120 mm .
